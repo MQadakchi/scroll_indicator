@@ -1,0 +1,79 @@
+:root {
+  --primaryColor: #dabfff;
+  --secondaryColor: #4f518c;
+  --textColor: #907ad6;
+  --lightColor: #7fdeff;
+  --darkColor: #2c2a4a;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/fonts/vazir.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: vazir;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--darkColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightColor);
+  border-radius: 25px;
+  box-shadow: 0 0 5px var(--lightColor);
+}
+header {
+  width: 100%;
+  height: 100px;
+  background-color: var(--darkColor);
+  padding: 25px 0;
+  text-align: center;
+  position: fixed;
+}
+header h1 {
+  color: var(--lightColor);
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.scroll {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+}
+
+main {
+  padding: 125px 50px;
+  text-align: justify;
+}
